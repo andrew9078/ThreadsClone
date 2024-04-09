@@ -19,15 +19,15 @@ struct Profileheaderview: View {
             VStack(alignment: .leading, spacing: 12){
                 //Fullname and Username
                 VStack(alignment: .leading, spacing: 4){
-                    Text(user.fullname)
+                    Text(user?.fullname ?? "")
                         .font(.title2)
                         .fontWeight(.semibold)
                     
-                    Text(user.username)
+                    Text(user?.username ?? "")
                         .font(.subheadline)
                 }//Vstack .leading
                 
-                if let bio = user.bio{
+                if let bio = user?.bio{
                     Text(bio)
                         .font(.footnote)
                 }//if let
@@ -45,6 +45,6 @@ struct Profileheaderview: View {
     }
 }
 
-#Preview {
-    SwiftUIView()
-}
+//#Preview {
+   // SwiftUIView()
+//}

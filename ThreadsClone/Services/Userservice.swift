@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import Firebase
 import FirebaseFirestoreSwift
 
@@ -34,6 +35,10 @@ class Userservice{
         return users.filter({ $0.id != currentuid })
     }//static fun
     
+    static func fetchUsers(withUID uid: String) async throws -> User {
+        let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
+        return try snapshot.data(as: User.self)
+    }//static func
     
     func reset(){
         self.currentUser = nil

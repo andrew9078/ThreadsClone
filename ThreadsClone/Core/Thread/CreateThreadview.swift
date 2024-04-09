@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct CreateThreadview: View {
-    @State private var caption = ""
+    @StateObject var viewModel = CreateThreadViewModel()
+    
     @Environment (\.dismiss) var dismiss
+    
+    private var user: User? {
+        return Userservice.shared.currentUser
+    }
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -17,18 +23,18 @@ struct CreateThreadview: View {
                     CircularProfileImageView()
                     
                     VStack(alignment: .leading, spacing: 4){
-                        Text("Kelly")
+                        Text(user?.username ?? "")
                             .fontWeight(.semibold)
-                        TextField("Start a thread . . ." , text: $caption, axis: .vertical)
+                        TextField("Start a thread . . ." , text: $viewModel.caption, axis: .vertical)
                     }//VStack
                     
                     .font(.footnote)
                     
                     Spacer()
                     
-                    if(!caption.isEmpty){Button{
-                        caption = ""
-                        
+                    if(!viewModel.caption.isEmpty){Button{
+                    
+                        viewModel.caption = ""
                     } label: {
                         Image(systemName: "xmark")
                             .resizable()
@@ -56,10 +62,11 @@ struct CreateThreadview: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button("Post"){
-                        
+                        Task {try await viewModel.uploadThread()}
+                        dismiss()
                     }//Button
-                    .opacity(caption.isEmpty ? 0.5 : 1.0)
-                    .disabled(caption.isEmpty)
+                    .opacity(viewModel.caption.isEmpty ? 0.5 : 1.0)
+                    .disabled(viewModel.caption.isEmpty)
                     .fontWeight(.semibold)
                     .font(.subheadline)
                     .foregroundColor(.black)

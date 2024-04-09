@@ -13,6 +13,11 @@
 		66338CBC2BC0E63F003E1A64 /* previewprovider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CBB2BC0E63F003E1A64 /* previewprovider.swift */; };
 		66338CC02BC0F849003E1A64 /* CurrentProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CBF2BC0F849003E1A64 /* CurrentProfileView.swift */; };
 		66338CC32BC10102003E1A64 /* Profileheaderview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CC22BC10102003E1A64 /* Profileheaderview.swift */; };
+		66338CC52BC10B61003E1A64 /* Usercontentview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CC42BC10B61003E1A64 /* Usercontentview.swift */; };
+		66338CC72BC5E6DE003E1A64 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CC62BC5E6DE003E1A64 /* Thread.swift */; };
+		66338CC92BC5EDBD003E1A64 /* Threadviewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CC82BC5EDBD003E1A64 /* Threadviewmodel.swift */; };
+		66338CCB2BC5EDDF003E1A64 /* Threadservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CCA2BC5EDDF003E1A64 /* Threadservice.swift */; };
+		66338CCD2BC5F9B8003E1A64 /* Feedviewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66338CCC2BC5F9B8003E1A64 /* Feedviewmodel.swift */; };
 		668226D12BBDDEDD0056E3B1 /* CreateThreadview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668226D02BBDDEDD0056E3B1 /* CreateThreadview.swift */; };
 		668226D32BBF5A160056E3B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 668226D22BBF5A160056E3B1 /* GoogleService-Info.plist */; };
 		668226D62BBF5E2B0056E3B1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 668226D52BBF5E2B0056E3B1 /* FirebaseAuth */; };
@@ -71,6 +76,11 @@
 		66338CBB2BC0E63F003E1A64 /* previewprovider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewprovider.swift; sourceTree = "<group>"; };
 		66338CBF2BC0F849003E1A64 /* CurrentProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProfileView.swift; sourceTree = "<group>"; };
 		66338CC22BC10102003E1A64 /* Profileheaderview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profileheaderview.swift; sourceTree = "<group>"; };
+		66338CC42BC10B61003E1A64 /* Usercontentview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usercontentview.swift; sourceTree = "<group>"; };
+		66338CC62BC5E6DE003E1A64 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		66338CC82BC5EDBD003E1A64 /* Threadviewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threadviewmodel.swift; sourceTree = "<group>"; };
+		66338CCA2BC5EDDF003E1A64 /* Threadservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threadservice.swift; sourceTree = "<group>"; };
+		66338CCC2BC5F9B8003E1A64 /* Feedviewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedviewmodel.swift; sourceTree = "<group>"; };
 		668226D02BBDDEDD0056E3B1 /* CreateThreadview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadview.swift; sourceTree = "<group>"; };
 		668226D22BBF5A160056E3B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		668226DD2BBF60960056E3B1 /* Registrationmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrationmodel.swift; sourceTree = "<group>"; };
@@ -153,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				66338CC22BC10102003E1A64 /* Profileheaderview.swift */,
+				66338CC42BC10B61003E1A64 /* Usercontentview.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -261,6 +272,9 @@
 			isa = PBXGroup;
 			children = (
 				668226E82BC0BA8E0056E3B1 /* User.swift */,
+				66338CC62BC5E6DE003E1A64 /* Thread.swift */,
+				66338CC82BC5EDBD003E1A64 /* Threadviewmodel.swift */,
+				66338CCA2BC5EDDF003E1A64 /* Threadservice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +347,7 @@
 			children = (
 				66918AA12BB4EAFD007864A1 /* Feedview.swift */,
 				66918AAF2BB523B3007864A1 /* Threadcell.swift */,
+				66338CCC2BC5F9B8003E1A64 /* Feedviewmodel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -549,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66918AAA2BB4F3B1007864A1 /* Activityview.swift in Sources */,
+				66338CC72BC5E6DE003E1A64 /* Thread.swift in Sources */,
 				668226E32BBF7D9D0056E3B1 /* Contentview.swift in Sources */,
 				66338CB52BC0C12A003E1A64 /* Userservice.swift in Sources */,
 				66918AA52BB4EB74007864A1 /* Exploreview.swift in Sources */,
@@ -564,17 +580,21 @@
 				66918ABC2BBCFA96007864A1 /* EditProfileview.swift in Sources */,
 				66338CB72BC0C204003E1A64 /* Profileviewmodel.swift in Sources */,
 				668226E72BBF85220056E3B1 /* loginviewmodel.swift in Sources */,
+				66338CC92BC5EDBD003E1A64 /* Threadviewmodel.swift in Sources */,
 				66918A9B2BB49189007864A1 /* Threadstextfieldmodifier.swift in Sources */,
 				66338CC02BC0F849003E1A64 /* CurrentProfileView.swift in Sources */,
 				66338CB92BC0C8CF003E1A64 /* Exploreviewmodel.swift in Sources */,
 				66918A962BB0DE40007864A1 /* Loginview.swift in Sources */,
 				66918AAE2BB51F7E007864A1 /* Profileview.swift in Sources */,
+				66338CCB2BC5EDDF003E1A64 /* Threadservice.swift in Sources */,
 				668226DE2BBF60960056E3B1 /* Registrationmodel.swift in Sources */,
 				66338CC32BC10102003E1A64 /* Profileheaderview.swift in Sources */,
+				66338CCD2BC5F9B8003E1A64 /* Feedviewmodel.swift in Sources */,
 				66338CBC2BC0E63F003E1A64 /* previewprovider.swift in Sources */,
 				66918A652BB0DAC7007864A1 /* ContentView.swift in Sources */,
 				66918A632BB0DAC7007864A1 /* ThreadsCloneApp.swift in Sources */,
 				66918AB92BBCD4B7007864A1 /* Profilethreadfilter.swift in Sources */,
+				66338CC52BC10B61003E1A64 /* Usercontentview.swift in Sources */,
 				66918A982BB3AAFD007864A1 /* Registrationview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
